@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/accent_color"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.QuizMobileB"
+        app:title="Home"
+        app:titleMarginStart="0dp"
+        app:titleTextColor="@color/text_and_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_home"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:gravity="center"
+            android:text="@string/quiz"
+            android:textColor="@color/primary_text"
+            android:textSize="54sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:gravity="center"
+            android:text="@string/pemrograman_mobile_b"
+            android:textColor="@color/secondary_text"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="267dp"
+            android:layout_height="250dp"
+            android:layout_marginVertical="22dp"
+            android:src="@drawable/ic_undraw_coding"
+            tools:ignore="ContentDescription" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                app:elevation="4dp"
+                app:icon="@drawable/ic_baseline_person_24"
+                app:iconGravity="textStart" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_map"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    app:elevation="4dp"
+                    app:icon="@drawable/ic_baseline_home_24"
+                    app:iconGravity="textStart" />
+
+                <Space
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_message"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    app:elevation="4dp"
+                    app:icon="@drawable/ic_baseline_phone_24"
+                    app:iconGravity="textStart" />
+
+            </TableRow>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_exit"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                app:elevation="4dp"
+                app:icon="@drawable/ic_baseline_power_settings_new_24"
+                app:iconGravity="textStart"
+                app:strokeColor="@color/accent_color" />
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
