@@ -51,28 +51,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // move to profile activity
     private void moveToProfile() {
         Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
         startActivity(profileIntent);
     }
 
+    // to show map
     private void showMap() {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW);
         mapIntent.setData(Uri.parse("geo:-5.054178,119.542379?z=20"));
         if (mapIntent.resolveActivity(getPackageManager()) != null) startActivity(mapIntent);
     }
 
+    // to dial phone number
     private void dialPhoneNumber() {
         Intent intentPhone = new Intent(Intent.ACTION_DIAL);
         intentPhone.setData(Uri.parse("tel:" + "+6282290380510"));
         if (intentPhone.resolveActivity(getPackageManager()) != null) startActivity(intentPhone);
     }
 
+    // when back button on device is pressed
     @Override
     public void onBackPressed() {
         showExitAlertDialog();
     }
 
+    // to show alert dialog
     private void showExitAlertDialog() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 

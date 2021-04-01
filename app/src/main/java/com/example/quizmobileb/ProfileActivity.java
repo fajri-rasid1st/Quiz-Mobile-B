@@ -24,6 +24,8 @@ public class ProfileActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Button btnExit = findViewById(R.id.btn_exit);
+
+        // when exit button is pressed
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,12 +34,14 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
+    // back to home activity
     @Override
     public boolean onSupportNavigateUp() {
         finish();
         return true;
     }
 
+    // to show alert dialog
     private void showExitAlertDialog() {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
